@@ -91,14 +91,40 @@ console.log(`The last item is ${latestShoppingCart(shoppingCart).name}, with a p
 Create a function "loopUntil" which receives an integer x between 0 and 9.
 The function loops and prints a random number between 0 and 9 until the random number is bigger than x for three times in a row.
 */
+console.log('N16')
+const loopUntil = function(x) {
+    let count = 0
+    while(count<3) {
+        let rnum = Math.random()*9
+        if(rnum>x) {
+            count++
+        } else {
+            count = 0
+        }
+        console.log(Math.round(rnum))
+    }
+    return 'Finished loop'
+}
+console.log(loopUntil(3), '\n')
 
-/* WRITE YOUR CODE HERE */
 
 /* EXERCISE 17
 Write a function "average" which receives an array and return the average value. The function automatically skips non-numeric entries in the array.
 */
+console.log('N17')
+const average = function(array) {
+    let sum = 0
+    let count = 0
+    for(num of array) {
+        if(typeof num == 'number') {
+            sum+=num
+            count++
+        }
+    }
+    return sum/count
+}
+console.log(`Average value is ${average([1, 5, 'hello', 7, 2])}`, '\n')
 
-/* WRITE YOUR CODE HERE */
 
 /* EXERCISE 18
 Write a function "longest" to find the longest string from an given array of strings.
