@@ -129,21 +129,43 @@ console.log(`Average value is ${average([1, 5, 'hello', 7, 2])}`, '\n')
 /* EXERCISE 18
 Write a function "longest" to find the longest string from an given array of strings.
 */
+console.log('N18')
+const longest = function(array) {
+    let longestString = ''
+    for(string of array) {
+        if(longestString.length<string.length) {
+            longestString = string
+        }
+    }
+    return longestString
+}
+console.log(`Longest string is: ${longest(['hello', 'bye', 'bitcoin'])}`, '\n')
 
-/* WRITE YOUR CODE HERE */
 
 /* EXERCISE 19
 Write a function to create a very simple anti spam filter for your mailbox. The function takes a string emailContent, and returns a boolean.
 Check if the email is valid using string methods. The email (in this example) is valid if the words SPAM and SCAM does not appear.
 */
+console.log('N19')
+const spamFilter = function(emailContent) {
+    return emailContent.includes('SPAM')||emailContent.includes('SCAM') ? true : false
+}
+console.log(spamFilter('hello guys its a SPAM'), '\n')
 
-/* WRITE YOUR CODE HERE */
 
 /* EXERCISE 20
 Write a function that receives a date d as parameter and calculates the number of days passes since the d.
 */
+console.log('N20')
+const daysPassed = function(d) {
+    let date = new Date(d)
+    let todayDate = new Date()
+    let diff = todayDate.getTime() - date.getTime()
+    let diffDays = diff / (1000 * 3600 * 24)
+    return diffDays
+}
+console.log(daysPassed('04/03/2021'), '\n')
 
-/* WRITE YOUR CODE HERE */
 
 /* EXERCISE 21
 Write a function "matrixGenerator" that receives x and y as parameter. The result should be a matrix of x times y with, as value, the index of the position.
@@ -151,5 +173,15 @@ Ex.: X = 3, Y = 2
 ["00","01","02"
 "10","11","12"]
 */
-
-/* WRITE YOUR CODE HERE */
+console.log('N21')
+const matrixGenerator = function(x, y) {
+    let matrix = []
+    for(let ny=0; ny<y; ny++) {
+        for(let nx=0; nx<x; nx++) {
+            matrix.push(`${ny}${nx}`)
+        }
+        console.log(matrix)
+        matrix = []
+    }
+}
+matrixGenerator(3, 5)
