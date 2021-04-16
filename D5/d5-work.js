@@ -70,34 +70,74 @@ me.skills.pop()
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
 
-
+const dice = function() {
+  return Math.floor(Math.random()*6) + 1
+}
 
 
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
 
+const whoIsBigger = function(n1, n2) {
+  return Math.max(n1, n2)
+}
+
+
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
+const splitMe = function(str) {
+  return str.split(' ')
+}
+
+
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
+
+const deleteOne = function(str, bool) {
+  return bool ? str.substring(1) : str.slice(0, -1)
+}
+
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
 
+const onlyLetters = function(str) {
+  return str.replace(/[0-9]/g, '')
+}
+
+
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
 
+const isThisAnEmail = function(str) {
+  let parts = str.split('@') // Split email string in 2 parts, personal part(before @) and domain part(after @)
+  if(parts.length===2) {
+    let domainParts = parts[1].split('.') // Split the domain part to check if there is atleast 1 '.' after @
+    if(domainParts.length >= 2) {
+      return true // Return true if there is something before @, after @, before . and after .
+    }
+  }
+  return false // Return false if not
+}
+// console.log(isThisAnEmail('fabler65@gmail.com'), isThisAnEmail('william.carevs@gmail.com'), isThisAnEmail('hello@g.mail.com'), isThisAnEmail('hello@hi'), isThisAnEmail('hello'), isThisAnEmail('hello.hi'))
+// Must be true true true false false false
+
+
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
+
+const whatDayIsIt = function() {
+  return new Date().getDay()
+}
 
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
@@ -110,13 +150,43 @@ me.skills.pop()
     }
 */
 
+const rollTheDices = function(n) {
+  let rollCount = 0
+  let rolls = []
+  while(rollCount < n) {
+    rolls.push(dice())
+    rollCount++
+  }
+  return {sum: rolls.reduce(function(a, b) {
+    return a + b
+  }), values: rolls}
+}
+//console.log(rollTheDices(6))
+
+
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
 
+const howManyDays = function(date) {
+  let nDate = new Date(date)
+  let daysPassed = (new Date()).getTime() - nDate.getTime()
+  return Math.floor(daysPassed / (1000*3600*24))
+}
+// console.log(howManyDays('03/22/2021'))
+
+
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
+
+const isTodayMyBirthday = function() {
+  const myBday = [22, 3]
+  let today = new Date()
+  return today.getDay() === myBday[0] && today.getMonth() === myBday[1] ? true : false
+}
+// console.log(isTodayMyBirthday())
+
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
