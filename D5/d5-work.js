@@ -462,6 +462,15 @@ const removeIndex = function(num) {
   ***
 */
 
+const halfTree = function(height) {
+  for(let h=1; h<=height; h++){
+    console.log('*'.repeat(h))
+  }
+  return 'Tree made.'
+}
+// console.log(halfTree(10))
+
+
 /* Ex.22 
   Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
   Example: 
@@ -471,7 +480,34 @@ const removeIndex = function(num) {
   *****
 */
 
+const tree = function(height) {
+  for(let h=1; h<=height; h++){
+    let leftShift = height - h
+    let shiftString = ' '.repeat(leftShift)
+    let treeString = '*'.repeat((h*2)-1)
+    console.log(shiftString + treeString)
+  }
+  return 'Tree made.'
+}
+// console.log(tree(25))
+
+
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
 
+const isItPrime = function(num) {
+  if(num > 1) {
+    for(let i=num-1; num>1; i--) {
+      if(i===1) {
+        return true
+      }else if(num%i===0) {
+        return false
+      }
+    }
+    return true
+  } else {
+    return false
+  }
+}
+// console.log(isItPrime(13))
