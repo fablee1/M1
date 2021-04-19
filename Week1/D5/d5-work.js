@@ -501,7 +501,7 @@ const isItPrime = function(num) {
     for(let i=num-1; num>1; i--) {
       if(i===1) {
         return true
-      }else if(num%i===0) {
+      } else if(num%i===0) {
         return false
       }
     }
