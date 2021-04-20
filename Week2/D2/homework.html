@@ -1,0 +1,178 @@
+<html>
+  <head>
+  
+
+    <style>
+      .myHeading {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header onclick="makeItClickable()">
+      <h1>This is the title of the page</h1>
+      <h2>This is the subtitle of the page</h2>
+    </header>
+
+    <main>
+      <hr />
+      <section>
+        <ul id="firstList">
+          <li>1st</li>
+          <li>2nd</li>
+          <li>3rd</li>
+        </ul>
+  
+        <ul id="secondList">
+          <li>1st</li>
+          <li>2nd</li>
+          <li>3rd</li>
+        </ul>
+      </section>
+      
+      <a href="strive.school">This link goes to Strive School</a>
+
+      <div>
+        <p>This text is just for the exercise</p>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          id="input-field"
+          placeholder="input field for the exercise"
+        />
+      </div>
+    </main>
+
+    <footer onclick="changeFooterText()">
+      <p>And this text is just for the exercise too!</p>
+    </footer>
+    <script>
+      /* EXERCISE 1
+      Write a function for changing the title of the document in something else.
+      */
+
+      const changeTitle = function (newTitle) {
+        document.getElementsByTagName('h1')[0].innerText = newTitle
+      };
+
+      /* EXERCISE 2
+      Write a function for changing the class of the title of the page in "myHeading".
+      */
+
+      const addClassToTitle = function () {
+        document.getElementsByTagName('h1')[0].classList.add('myHeading')
+      };
+
+      /* EXERCISE 3
+      Write a function for changing the text of only the p which are children of a div.
+      */
+
+      const changePcontent = function () {
+        let paragraphsInDiv = document.querySelectorAll('div > p')
+        for(p of paragraphsInDiv) {
+          p.innerText = 'New text'
+        }
+      };
+
+      /* EXERCISE 4
+      Write a function for changing the destination of every link to https://www.google.com
+      */
+
+      const changeUrls = function () {
+        let allLinks = document.getElementsByTagName('a')
+        for(a of allLinks) {
+          a.setAttribute('href', 'https://www.google.com')
+        }
+      };
+
+      /* EXERCISE 5
+       Write a function for adding a new item in the second list.
+       */
+
+      const addToTheSecond = function (content) {
+        let li = document.createElement('li')
+        li.innerText = content
+
+        document.getElementById('secondList').appendChild(li)
+      };
+
+      /* EXERCISE 6
+      Write a function for adding a second paragraph to the div.
+      */
+
+      const addParagraph = function (content) {
+        let p = document.createElement('p')
+        p.innerText = content
+
+        document.getElementsByTagName('div')[0].appendChild(p)
+      };
+
+      /* EXERCISE 7
+      Write a function for making the first UL disappear.
+      */
+
+      const firstUlDisappear = function () {
+        document.querySelectorAll('ul')[0].remove()
+      };
+
+      /* EXERCISE 8
+      Write a function for making the background of every UL green.
+      */
+
+      const paintItGreen = function () {
+        let uls = document.getElementsByTagName('ul')
+        for(ul of uls) {
+          ul.style.backgroundColor = 'green'
+        }
+      };
+
+      /* EXERCISE 9
+      Make the heading of the page change color every time the user clicks on it.
+      */
+
+      const makeItClickable = function () {
+        let r = Math.round(Math.random()*255)
+        let g = Math.round(Math.random()*255)
+        let b = Math.round(Math.random()*255)
+
+        document.getElementsByTagName('header')[0].style.backgroundColor = `rgb(${r},${g},${b})`
+      };
+
+      /* EXERCISE 10
+      Change the footer text with something else when the user clicks on it.
+      */
+
+      const changeFooterText = function () {
+        let randomText = ''
+        const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 '
+        for(let x=0; x<Math.round((Math.random()*40)+10); x++) {
+          randomText += alphabet[Math.floor(Math.random()*alphabet.length)]
+        }
+        document.querySelector('footer p').innerText = randomText
+      };
+
+      /* EXERCISE 11
+      Attach an event listener to the input field in the page for console logging its value just after any keystroke.
+      */
+
+      const inputField = document.getElementById('input-field');
+      inputField.addEventListener('input', function(e){
+        console.log(e.target.value)
+      })
+
+      /* EXERCISE 12
+      Create a new welcome alert message when the page successfully loads.
+      */
+
+      window.onload = function () {
+        alert('WELCOME TO OUR PAGE')
+      };
+
+      /* EXERCISE 13
+      Use HTML5 tags to divide the content of the page in a more semantic way.
+      */
+    </script>
+  </body>
+</html>
