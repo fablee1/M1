@@ -1,0 +1,139 @@
+h1 {
+    font-family: 'Croissant One';
+    font-size: 2.5vw;
+}
+
+body {
+    text-align: center;
+    min-width: 800px;
+}
+
+.cell {
+    display: flex;
+    width: 4.7%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0.2% 0.2% 0.2% 0.2%;
+    font-weight: 700;
+    padding: 1%;
+    background-color: rgb(250, 242, 168);
+}
+
+.cell:hover {
+    background-color: rgb(255, 211, 161);
+}
+
+.cell:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+#bingoBoard {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background: gold;
+}
+
+h2 {
+    font-size:calc(8px + 0.8vw);
+}
+
+#boardName {
+    display: inline-block;
+    width: 5%;
+    border-right: 2px solid black;
+    padding-right: 5px;
+    padding-top: auto;
+}
+
+#playField {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    padding-left: 5px;
+}
+
+.winCell {
+    background-color: rgb(5, 204, 5);
+}
+
+
+.cellDidWin {
+    background-color: lightgreen;
+}
+
+button {
+    padding: 1%;
+}
+
+#controlButtons {
+    margin-top: 10px;
+}
+
+#cards {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.playerCard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: silver;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.playerCell {
+    display: flex;
+    width: 15%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    padding: 1%;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.playerCell:hover {
+    background-color: rgb(255, 211, 161);
+}
+
+.playerCell:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+#info {
+    color: red;
+    font-size: 85%;
+    font-weight: bold;
+}
+
+#stats {
+    display: inline;
+    padding-left: 15px;
+}
