@@ -63,9 +63,12 @@ const playGame = function() {
     for(cell of allPlayerCells) {
         if(cell.innerText == randomNumber) {
             cell.style.backgroundColor = 'rgb(5, 204, 5)';
+            cell.classList.add('winningCell')
             matches()
         }
     }
+
+    checkWin()
 
 
     document.getElementById('info').style.display = 'none'
@@ -115,6 +118,23 @@ const newCard = function() {
         newCard.appendChild(cell)
     }
     document.getElementById('cards').appendChild(newCard)
+}
+
+const checkWin = function() {
+    let cards = document.querySelectorAll('.playerCard')
+    for(let x=0; x<cards.length; x++) {
+        let winCell = cards[x].children
+        let count = 0
+        for(cell of winCell) {
+            if((Array.from(cell.classList)).includes('winningCell')) {
+                count++
+            }
+        }
+        if(count == 24) {
+            alert('YOU WON. Resetting.')
+            resetGame()
+        }
+    }
 }
 
 const delCards = function() {
