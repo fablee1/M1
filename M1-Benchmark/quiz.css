@@ -1,0 +1,164 @@
+body {
+    margin: auto;
+    font-family: 'Arvo';
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+#container {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(245, 228, 200), rgb(245, 238, 177) 50%, rgb(230, 216, 157) 100%);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 50px rgb(10, 10, 10);
+}
+
+#logo {
+    margin-top: -10px;
+    width: 35%;
+    margin-bottom: -25px;
+}
+
+#menu > hr {
+    width: 75%;
+}
+
+h2 {
+    width: 25%;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    font-size: 0.9vw;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    margin: auto;
+    margin-bottom: 1%;
+}
+
+#topicContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.topicCard {
+    width: 15%;
+    margin: 1%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 35px;
+    box-shadow: inset 0 0 15px #000000;
+    text-align: center;
+}
+
+.topicCardImg {
+    max-width: 50%;
+    min-width: 50%;
+    max-height: 50%;
+    min-height: 50%;
+}
+
+.topicCard h3 {
+    font-size: 1.5vw;
+    margin-top: -0.75%;
+    padding-top: 2%;
+}
+
+.topicCard p {
+    font-size: 0.7vw;
+    width: 85%;
+    margin: auto;
+}
+
+.topicCardLine {
+    margin-top: -3%;
+    width: 80%;
+}
+
+.quizContainer {
+    width: 60%;
+    border-radius: 10px;
+    border: 3px dashed black;
+    margin: auto;
+    margin-top: 2%;
+    background: #2193b0;
+    background: linear-gradient(-90deg, #6dd5ed, #3bbedf); 
+}
+
+.quizContainerTopBar {
+    margin: auto;
+}
+
+.topic, .diff, .counter {
+    display: inline-block;
+    font-size: 1vw;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.quizContainerMain > img {
+    margin-top: 5%;
+    width: 35%
+}
+
+.multipleButton {
+    width: 40%;
+    padding: 2%;
+    margin: 1%;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1vw;
+}
+
+.multipleButton:hover {
+    background-color: rgb(210, 250, 135);
+}
+
+.boolButton {
+    width: 40%;
+    padding: 2%;
+    margin: 1%;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1vw;
+}
+
+.chooseAnswer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h4 {
+    font-size: 1.5vw;
+}
+
+.quizContainerMain > button {
+    width: 82%;
+    margin: 2%;
+    margin-bottom: 3%;
+    opacity: 0;
+    border-radius: 10px;
+    border: 1% solid black;
+    padding: 1%;
+}
+
+.statsBlock {
+    background-image: url('https://fit2b.us/wp-content/uploads/2018/03/sale-banner-II.jpg');
+    margin: auto;
+    margin-top: 10%;
+    background-size: cover;
+    width: 70%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border: 3px solid black;
+    border-radius: 10px;
+}
