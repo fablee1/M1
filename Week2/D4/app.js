@@ -61,7 +61,7 @@ const playGame = function() {
 
     let allPlayerCells = document.querySelectorAll('.playerCell')
     for(cell of allPlayerCells) {
-        if(cell.innerText == randomNumber) {
+        if(cell.innerText == randomNumber+1) {
             cell.style.backgroundColor = 'rgb(5, 204, 5)';
             cell.classList.add('winningCell')
             matches()
@@ -71,7 +71,7 @@ const playGame = function() {
     checkWin()
 
 
-    document.getElementById('info').style.display = 'none'
+    document.getElementById('info').style.display = ''
     document.getElementById('newCard').style.display = 'none'
     document.getElementById('delCards').style.display = 'none'
 }
@@ -107,7 +107,7 @@ const newCard = function() {
         let randomNumber
         let numberWas = false
         while(!numberWas) {
-            randomNumber = Math.floor(Math.random() * 76)
+            randomNumber = Math.floor(Math.random() * 76) + 1
             if(!randNumbers.includes(randomNumber)) {
                 numberWas = true
             }
@@ -131,8 +131,8 @@ const checkWin = function() {
             }
         }
         if(count == 24) {
-            alert('YOU WON. Resetting.')
-            resetGame()
+            writeInfo('You won!')
+            //resetGame()
         }
     }
 }
