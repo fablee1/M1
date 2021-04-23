@@ -1,8 +1,3 @@
-//HOW TO calculate the result
-//You can do it in 2 ways:
-//If you are presenting all questions together, just take all the radio buttons and check if the selected answer === correct_answer
-//If you are presenting one question at a time, just add one point or not to the user score if the selected answer === correct_answer
-
 const quizTopics = [
   {topic: 'Computers', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ktfJLH99Z3K7KV1-wQW_TlQ8LNafyL-lCSI6NlwkWSIeJ_R3H8P3EgsAvcozrELwcKY&usqp=CAU', description: 'This quiz is about computer, they are interesting arent they?', questions: [
     {
@@ -353,11 +348,4 @@ const generateTopics = function() {
 
 window.onload = function () {
   generateTopics()
-  //IF YOU ARE DISPLAYING ALL THE QUESTIONS TOGETHER:
-  //HINT: for each question, create a container with the "question"
-  //create a radio button https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio with, as option the both the correct answer and the incorrect answers
-  //when EVERY question has an answer (google for how to get a value from a radio button with JS)
-  //IF YOU ARE DISPLAYING ONE QUESTION AT A TIME
-  //Display first question with a title + radio button
-  //when the user select the answer, pick the next question and remove this from the page after added in a varible the users' choice.
-  };
+};
