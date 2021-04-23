@@ -98,9 +98,48 @@ const quizTopics = [
       incorrect_answers: ["Python", "C", "Jakarta"],
     }
   ]},
-  {topic: 'Geography', img: 'https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/earth_ver_1.png', description: 'This quiz is about geography, lets find that country!', questions: []},
-  {topic: 'Animals', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw6XhIGtLCT3ELs0IqAEbu47brbPSRX9MBh6b4ETgSNn6_pdx86DlotoSQg4rYn6VJYxM&usqp=CAU', description: 'This quiz is about animals, what are they?', questions: []},
-  {topic: 'Nature', img: 'https://i.pinimg.com/originals/95/58/bc/9558bccc477433c4d33f73a184752d47.png', description: 'This quiz is about nature, find out what you know!', questions: []}
+  {topic: 'Geography', img: 'https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/earth_ver_1.png', description: 'This quiz is about geography, lets find that country!', questions: [
+    {
+      img: 'https://www.myneobuxportal.com/wp-content/uploads/2019/02/country-shape-quiz/5.png',
+      type: "multiple",
+      difficulty: "easy",
+      question: "Which country is on the image?",
+      correct_answer: "United Kingdom",
+      incorrect_answers: [
+        "Japan",
+        "Venezuela",
+        "Chile",
+      ],
+    },
+  ]},
+  {topic: 'Animals', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw6XhIGtLCT3ELs0IqAEbu47brbPSRX9MBh6b4ETgSNn6_pdx86DlotoSQg4rYn6VJYxM&usqp=CAU', description: 'This quiz is about animals, what are they?', questions: [
+    {
+      img: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-09/14/16/enhanced/buzzfeed-prod-web-05/enhanced-29092-1536956328-1.jpg?output-format=webp&output-quality=auto',
+      type: "multiple",
+      difficulty: "easy",
+      question: "What is this animal?",
+      correct_answer: "Hedgehog",
+      incorrect_answers: [
+        "Shark",
+        "Panther",
+        "Elephant",
+      ],
+    },
+  ]},
+  {topic: 'Nature', img: 'https://i.pinimg.com/originals/95/58/bc/9558bccc477433c4d33f73a184752d47.png', description: 'This quiz is about nature, find out what you know!', questions: [
+    {
+      img: 'https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_640,f_auto/DCTM_Penguin_UK_DK_AL526021_adrg5o.jpg',
+      type: "multiple",
+      difficulty: "easy",
+      question: "Which tree is this?",
+      correct_answer: "Oak tree",
+      incorrect_answers: [
+        "Fir tree",
+        "Walnut tree",
+        "Ash tree",
+      ],
+    },
+  ]}
 ]
 
 let totalQuestionsInQuiz = 0
